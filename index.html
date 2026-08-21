@@ -1,136 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Unitora — fast, accurate unit, currency and everyday conversions.">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Unitora — fast, accurate unit, currency and everyday conversions."
+  >
+
   <title>Unitora — Convert Anything</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
+
 <header class="site-header">
-  <a class="logo" href="#" onclick="showPage('converter');return false;">Unitora</a>
+
+  <a
+    class="logo"
+    href="#"
+    onclick="showPage('converter');return false;"
+  >
+    Unitora
+  </a>
+
+
   <nav>
-    <button onclick="showPage('converter')">Converter</button>
-    <button onclick="showPage('popular')">Popular</button>
-    <button onclick="showPage('categories')">Categories</button>
-    <button onclick="showPage('about')">About</button>
+
+    <button onclick="showPage('converter')">
+      Converter
+    </button>
+
+    <button onclick="showPage('popular')">
+      Popular
+    </button>
+
+    <button onclick="showPage('categories')">
+      Categories
+    </button>
+
+    <button onclick="showPage('about')">
+      About
+    </button>
+
   </nav>
-  <button class="theme-btn" id="themeBtn" title="Toggle theme">🌙</button>
+
+
+  <button
+    class="theme-btn"
+    id="themeBtn"
+    title="Toggle theme"
+  >
+    🌙
+  </button>
+
 </header>
 
+
 <main>
-  <section id="converterPage" class="page active">
-    <div class="hero">
-      <div class="pill">⚡ Fast &nbsp;•&nbsp; Accurate &nbsp;•&nbsp; Free</div>
-      <h1>The smarter way to<br><span>convert anything.</span></h1>
-      <p>Convert units, currencies and everyday values instantly with a clean, powerful converter built for everyone.</p>
+
+
+<!-- ================================================= -->
+<!-- CONVERTER -->
+<!-- ================================================= -->
+
+<section
+  id="converterPage"
+  class="page active"
+>
+
+
+  <div class="hero">
+
+    <div class="pill">
+      ⚡ Fast &nbsp;•&nbsp; Accurate &nbsp;•&nbsp; Free
     </div>
 
-    <section class="converter-card">
-      <div class="tabs">
-        <button class="tab active" data-type="length">Length</button>
-        <button class="tab" data-type="weight">Weight</button>
-        <button class="tab" data-type="temperature">Temperature</button>
-        <button class="tab" data-type="currency">Currency</button>
-        <button class="tab" data-type="area">Area</button>
-        <button class="tab" data-type="volume">Volume</button>
-        <button class="tab" data-type="time">Time</button>
-        <button class="tab" data-type="speed">Speed</button>
-        <button class="tab" data-type="data">Data</button>
-      </div>
 
-      <div class="converter-grid">
-        <div class="field">
-          <label>Amount</label>
-          <input id="amount" type="number" inputmode="decimal" value="1" placeholder="Enter amount">
-        </div>
-        <div class="field">
-          <label>From</label>
-          <select id="fromUnit"></select>
-        </div>
-        <button class="swap" id="swapBtn" title="Swap units">⇄</button>
-        <div class="field">
-          <label>To</label>
-          <select id="toUnit"></select>
-        </div>
-      </div>
+    <h1>
+      The smarter way to
+      <br>
+      <span>convert anything.</span>
+    </h1>
 
-      <button class="convert-btn" id="convertBtn">Convert</button>
 
-      <div class="result-box">
-        <div class="result-label">Result</div>
-        <div id="result" class="result">1 meter = 3.28084 feet</div>
-        <div id="rateInfo" class="rate-info"></div>
-        <button class="copy-btn" id="copyBtn">Copy result</button>
-      </div>
+    <p>
+      Convert units, currencies and everyday values instantly
+      with a clean, powerful converter built for everyone.
+    </p>
 
-      <div class="quick">
-        <span>Try:</span>
-        <button data-quick="kg-lb">kg → lb</button>
-        <button data-quick="mi-km">miles → km</button>
-        <button data-quick="c-f">celsius → fahrenheit</button>
-        <button data-quick="usd-ngn">USD → NGN</button>
-      </div>
-    </section>
-  </section>
+  </div>
 
-  <section id="popularPage" class="page">
-    <div class="simple-page">
-      <h2>Popular conversions</h2>
-      <p>Jump straight into the conversions people use most.</p>
-      <div class="cards">
-        <button onclick="quickSet('length','meter','foot')">Meters → Feet</button>
-        <button onclick="quickSet('weight','kilogram','pound')">Kilograms → Pounds</button>
-        <button onclick="quickSet('temperature','celsius','fahrenheit')">Celsius → Fahrenheit</button>
-        <button onclick="quickSet('currency','USD','NGN')">USD → NGN</button>
-        <button onclick="quickSet('speed','kilometer per hour','mile per hour')">km/h → mph</button>
-        <button onclick="quickSet('data','gigabyte','megabyte')">GB → MB</button>
-      </div>
+
+
+  <section class="converter-card">
+
+
+    <!-- CATEGORY TABS -->
+
+    <div class="tabs">
+
+      <button
+        class="tab active"
+        data-type="length"
+      >
+        📏 Length
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="weight"
+      >
+        ⚖️ Weight
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="temperature"
+      >
+        🌡️ Temperature
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="currency"
+      >
+        💰 Currency
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="area"
+      >
+        ▣ Area
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="volume"
+      >
+        🧪 Volume
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="time"
+      >
+        ⏱️ Time
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="speed"
+      >
+        🚗 Speed
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="data"
+      >
+        💾 Data
+      </button>
+
+
+      <!-- NEW CATEGORIES -->
+
+
+      <button
+        class="tab"
+        data-type="energy"
+      >
+        ⚡ Energy
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="power"
+      >
+        🔋 Power
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="pressure"
+      >
+        💨 Pressure
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="force"
+      >
+        🧲 Force
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="frequency"
+      >
+        🔄 Frequency
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="angle"
+      >
+        📐 Angle
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="acceleration"
+      >
+        🚀 Acceleration
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="torque"
+      >
+        🛠️ Torque
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="density"
+      >
+        🧪 Density
+      </button>
+
+
+      <button
+        class="tab"
+        data-type="light"
+      >
+        💡 Light
+      </button>
+
     </div>
+
+
+
+    <!-- CONVERTER INPUTS -->
+
+    <div class="converter-grid">
+
+
+      <div class="field">
+
+        <label for="amount">
+          Amount
+        </label>
+
+        <input
+          id="amount"
+          type="number"
+          inputmode="decimal"
+          value="1"
+          placeholder="Enter amount"
+        >
+
+      </div>
+
+
+
+      <div class="field">
+
+        <label for="fromUnit">
+          From
+        </label>
+
+        <select id="fromUnit"></select>
+
+      </div>
+
+
+
+      <button
+        class="swap"
+        id="swapBtn"
+        title="Swap units"
+      >
+        ⇄
+      </button>
+
+
+
+      <div class="field">
+
+        <label for="toUnit">
+          To
+        </label>
+
+        <select id="toUnit"></select>
+
+      </div>
+
+    </div>
+
+
+
+    <button
+      class="convert-btn"
+      id="convertBtn"
+    >
+      Convert
+    </button>
+
+
+
+    <!-- RESULT -->
+
+    <div class="result-box">
+
+      <div class="result-label">
+        Result
+      </div>
+
+
+      <div
+        id="result"
+        class="result"
+      >
+        1 meter = 3.28084 feet
+      </div>
+
+
+      <div
+        id="rateInfo"
+        class="rate-info"
+      ></div>
+
+
+      <button
+        class="copy-btn"
+        id="copyBtn"
+      >
+        Copy result
+      </button>
+
+    </div>
+
+
+
+    <!-- QUICK CONVERSIONS -->
+
+    <div class="quick">
+
+      <span>
+        Try:
+      </span>
+
+
+      <button data-quick="kg-lb">
+        kg → lb
+      </button>
+
+
+      <button data-quick="mi-km">
+        miles → km
+      </button>
+
+
+      <button data-quick="c-f">
+        celsius → fahrenheit
+      </button>
+
+
+      <button data-quick="usd-ngn">
+        USD → NGN
+      </button>
+
+    </div>
+
+
   </section>
 
-  <section id="categoriesPage" class="page">
-    <div class="simple-page">
-      <h2>Categories</h2>
-      <p>Everything is organized so you can find a conversion quickly.</p>
-      <div class="cards category-cards">
-        <button onclick="setType('length')">📏 Length</button>
-        <button onclick="setType('weight')">⚖️ Weight</button>
-        <button onclick="setType('temperature')">🌡️ Temperature</button>
-        <button onclick="setType('currency')">💰 Currency</button>
-        <button onclick="setType('area')">▣ Area</button>
-        <button onclick="setType('volume')">🧪 Volume</button>
-        <button onclick="setType('time')">⏱️ Time</button>
-        <button onclick="setType('speed')">🚗 Speed</button>
-        <button onclick="setType('data')">💾 Data</button>
-      </div>
-    </div>
-  </section>
+</section>
 
-  <section id="aboutPage" class="page">
-    <div class="simple-page">
-      <h2>About Unitora</h2>
-      <p>Unitora is a fast, mobile-friendly conversion tool for students, professionals and everyday users.</p>
-      <div class="about-box">
-        <strong>What it includes</strong>
-        <ul>
-          <li>Unit conversions across multiple categories</li>
-          <li>Live currency exchange rates when online</li>
-          <li>Instant results without page reloads</li>
-          <li>Dark mode and responsive design</li>
-          <li>Copy-to-clipboard results</li>
-        </ul>
-      </div>
+
+
+<!-- ================================================= -->
+<!-- POPULAR -->
+<!-- ================================================= -->
+
+<section
+  id="popularPage"
+  class="page"
+>
+
+  <div class="simple-page">
+
+    <h2>
+      Popular conversions
+    </h2>
+
+
+    <p>
+      Jump straight into the conversions people use most.
+    </p>
+
+
+    <div class="cards">
+
+
+      <button
+        onclick="quickSet('length','meter','foot')"
+      >
+        📏 Meters → Feet
+      </button>
+
+
+      <button
+        onclick="quickSet('weight','kilogram','pound')"
+      >
+        ⚖️ Kilograms → Pounds
+      </button>
+
+
+      <button
+        onclick="quickSet('temperature','celsius','fahrenheit')"
+      >
+        🌡️ Celsius → Fahrenheit
+      </button>
+
+
+      <button
+        onclick="quickSet('currency','USD','NGN')"
+      >
+        💰 USD → NGN
+      </button>
+
+
+      <button
+        onclick="quickSet('speed','kilometer_per_hour','mile_per_hour')"
+      >
+        🚗 km/h → mph
+      </button>
+
+
+      <button
+        onclick="quickSet('data','gigabyte','megabyte')"
+      >
+        💾 GB → MB
+      </button>
+
+
+      <button
+        onclick="quickSet('energy','kilowatt_hour','joule')"
+      >
+        ⚡ kWh → Joule
+      </button>
+
+
+      <button
+        onclick="quickSet('power','horsepower','watt')"
+      >
+        🔋 Horsepower → Watts
+      </button>
+
+
+      <button
+        onclick="quickSet('pressure','bar','psi')"
+      >
+        💨 Bar → PSI
+      </button>
+
+
+      <button
+        onclick="quickSet('force','newton','pound_force')"
+      >
+        🧲 Newton → Pound-force
+      </button>
+
+
+      <button
+        onclick="quickSet('frequency','megahertz','hertz')"
+      >
+        🔄 MHz → Hz
+      </button>
+
+
+      <button
+        onclick="quickSet('angle','degree','radian')"
+      >
+        📐 Degrees → Radians
+      </button>
+
+
+      <button
+        onclick="quickSet('light','lux','foot_candle')"
+      >
+        💡 Lux → Foot-candle
+      </button>
+
     </div>
-  </section>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- CATEGORIES -->
+<!-- ================================================= -->
+
+<section
+  id="categoriesPage"
+  class="page"
+>
+
+  <div class="simple-page">
+
+
+    <h2>
+      All conversion categories
+    </h2>
+
+
+    <p>
+      Everything is organized so you can find a conversion quickly.
+    </p>
+
+
+
+    <div class="cards category-cards">
+
+
+      <button onclick="setType('length')">
+        📏 Length
+      </button>
+
+
+      <button onclick="setType('weight')">
+        ⚖️ Weight
+      </button>
+
+
+      <button onclick="setType('temperature')">
+        🌡️ Temperature
+      </button>
+
+
+      <button onclick="setType('currency')">
+        💰 Currency
+      </button>
+
+
+      <button onclick="setType('area')">
+        ▣ Area
+      </button>
+
+
+      <button onclick="setType('volume')">
+        🧪 Volume
+      </button>
+
+
+      <button onclick="setType('time')">
+        ⏱️ Time
+      </button>
+
+
+      <button onclick="setType('speed')">
+        🚗 Speed
+      </button>
+
+
+      <button onclick="setType('data')">
+        💾 Data
+      </button>
+
+
+      <button onclick="setType('energy')">
+        ⚡ Energy
+      </button>
+
+
+      <button onclick="setType('power')">
+        🔋 Power
+      </button>
+
+
+      <button onclick="setType('pressure')">
+        💨 Pressure
+      </button>
+
+
+      <button onclick="setType('force')">
+        🧲 Force
+      </button>
+
+
+      <button onclick="setType('frequency')">
+        🔄 Frequency
+      </button>
+
+
+      <button onclick="setType('angle')">
+        📐 Angle
+      </button>
+
+
+      <button onclick="setType('acceleration')">
+        🚀 Acceleration
+      </button>
+
+
+      <button onclick="setType('torque')">
+        🛠️ Torque
+      </button>
+
+
+      <button onclick="setType('density')">
+        🧪 Density
+      </button>
+
+
+      <button onclick="setType('light')">
+        💡 Light
+      </button>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- ABOUT -->
+<!-- ================================================= -->
+
+<section
+  id="aboutPage"
+  class="page"
+>
+
+  <div class="simple-page">
+
+
+    <h2>
+      About Unitora
+    </h2>
+
+
+    <p>
+      Unitora is a fast, mobile-friendly conversion tool
+      for students, professionals and everyday users.
+    </p>
+
+
+    <div class="about-box">
+
+      <strong>
+        What it includes
+      </strong>
+
+
+      <ul>
+
+        <li>
+          Unit conversions across multiple categories
+        </li>
+
+        <li>
+          Live currency exchange rates when online
+        </li>
+
+        <li>
+          Instant results without page reloads
+        </li>
+
+        <li>
+          Dark mode and responsive design
+        </li>
+
+        <li>
+          Copy-to-clipboard results
+        </li>
+
+        <li>
+          Energy, power, pressure and force conversions
+        </li>
+
+        <li>
+          Frequency, angle, acceleration and torque conversions
+        </li>
+
+        <li>
+          Light and density conversions
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
 </main>
 
+
+
+<!-- ================================================= -->
+<!-- FOOTER -->
+<!-- ================================================= -->
+
 <footer>
-  <span>© 2026 Unitora</span>
-  <span>Fast • Accurate • Free</span>
+
+  <span>
+    © 2026 Unitora
+  </span>
+
+
+  <span>
+    Fast • Accurate • Free
+  </span>
+
 </footer>
 
+
+
 <script src="script.js"></script>
+
 </body>
+
 </html>
