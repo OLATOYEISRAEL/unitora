@@ -114,7 +114,7 @@ time: {
     name: "Leap year (366 days)",
     factor: 31622400
   }
-}
+},
 
   // =========================
   // SPEED
