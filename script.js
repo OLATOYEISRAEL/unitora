@@ -77,16 +77,44 @@ const units = {
   // =========================
   // TIME
   // =========================
-  time: {
-    millisecond: { name: "Millisecond", factor: 0.001 },
-    second: { name: "Second", factor: 1 },
-    minute: { name: "Minute", factor: 60 },
-    hour: { name: "Hour", factor: 3600 },
-    day: { name: "Day", factor: 86400 },
-    week: { name: "Week", factor: 604800 },
-    month: { name: "Month (30 days)", factor: 2592000 },
-    year: { name: "Year (365 days)", factor: 31536000 }
+time: {
+  millisecond: { name: "Millisecond", factor: 0.001 },
+  second: { name: "Second", factor: 1 },
+  minute: { name: "Minute", factor: 60 },
+  hour: { name: "Hour", factor: 3600 },
+  day: { name: "Day", factor: 86400 },
+  week: { name: "Week", factor: 604800 },
+
+  month_28: {
+    name: "Month (28 days)",
+    factor: 2419200
   },
+
+  month_29: {
+    name: "Month (29 days)",
+    factor: 2505600
+  },
+
+  month_30: {
+    name: "Month (30 days)",
+    factor: 2592000
+  },
+
+  month_31: {
+    name: "Month (31 days)",
+    factor: 2678400
+  },
+
+  year: {
+    name: "Year (365 days)",
+    factor: 31536000
+  },
+
+  leap_year: {
+    name: "Leap year (366 days)",
+    factor: 31622400
+  }
+}
 
   // =========================
   // SPEED
